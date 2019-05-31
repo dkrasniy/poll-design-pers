@@ -62,7 +62,11 @@ html, body, p, h1, h2 {
 .radio-list-custom input[type=radio]:active {
   background: purple;
 }
+.radio-list-custom input[type=radio]:focus {
+  background: purple;
+}
 .radio-list-custom input[type=radio] + label {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   display: inline-flex;
   align-items: flex-start;
   background: #fff;

@@ -72,8 +72,12 @@ html,body,p,h1,h2 {
         &:active  {
             background:purple;
         }
+        &:focus {
+            background:purple;
+        }
 	}
 	input[type="radio"]+label {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
 		display: inline-flex;
 		align-items: flex-start;
 		background: #fff;
