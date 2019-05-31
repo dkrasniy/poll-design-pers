@@ -34,6 +34,7 @@ html, body, p, h1, h2 {
 
 .header-area {
   background: #fff;
+  border-top: 5px solid #0874d9;
 }
 
 .q-text {
@@ -105,8 +106,6 @@ html, body, p, h1, h2 {
   box-shadow: none;
   border-color: #0874d9;
   opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
   background-color: #0874d9;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);

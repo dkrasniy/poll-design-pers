@@ -1,4 +1,5 @@
 $blue: #0874d9;
+$green:#30B34E;
 $border-radius:.65em;
 @font-face {
 	font-family: 'Proxima Nova';
@@ -39,7 +40,7 @@ html,body,p,h1,h2 {
 
 .header-area {
     background: #fff;
-    // border-top:5px solid $blue;
+    border-top:5px solid $blue;
 }
 
 .q-text {
@@ -114,8 +115,6 @@ html,body,p,h1,h2 {
 		box-shadow: none;
 		border-color: $blue;
 		opacity: 1;
-		-webkit-transform: scale(1);
-		transform: scale(1);
 		background-color: $blue;
 		-webkit-transform: scale(1.2);
 		-ms-transform: scale(1.2);
