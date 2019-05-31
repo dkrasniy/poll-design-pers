@@ -64,14 +64,23 @@ html, body, p, h1, h2 {
 }
 
 .checkmark-done {
-  background: #30B34E;
-  height: 120px;
-  width: 120px;
-  margin: 0 auto;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' stroke-width='2' fill='%23ffffff' stroke='%23ffffff'%3E%3Cpolyline fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='1,9 5,13 15,3 ' data-cap='butt'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
-  background-size: 70px;
+  max-width: 8em;
+}
+.checkmark-done .primary {
+  fill: #f1fbf3;
+}
+.checkmark-done .secondary {
+  fill: #30B34E;
+}
+
+.no-active-polls-icon {
+  max-width: 8em;
+}
+.no-active-polls-icon .primary {
+  fill: #e2f0fe;
+}
+.no-active-polls-icon .secondary {
+  fill: #0874d9;
 }
 
 .radio-list-custom input[type=radio] {
@@ -175,6 +184,16 @@ html, body, p, h1, h2 {
 .poll-submit-btn[disabled] {
   background-color: #cccccc;
   color: #666666;
+}
+
+.bar-chart-container {
+  height: 50vh;
+}
+
+.bar {
+  background: #0874d9;
+  max-width: 30px;
+  border-radius: 0.5em;
 }
 
 /*# sourceMappingURL=custom.css.map */

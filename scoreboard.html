@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="css/tailwind.min.css" >
+      <link rel="stylesheet" href="css/custom.css">
+      <title>Scoreboard</title>
+   </head>
+   <body>
+         <div class="header-area py-16 px-4 pb-20">
+               <div class="relative text-center max-w-xl mx-auto">
+                  
+                  <h1 class="q-text text-4xl font-semibold relative">Scoreboard</h1>
+               </div>
+            </div>
+            <div class="max-w-3xl sm:mx-auto py-4 px-4 mx-4 -mt-16 shadow-xl border-radius-default bg-white text-center">
+            <div class="bar-chart-container relative">
+               <div class="x-axis"></div>
+               <div class="y-axis"></div>
+               <div class="values h-full flex items-baseline justify-around">
+                  <div class="bar q1 flex-1" style="height:80%;"></div>
+                  <div class="bar q2 flex-1" style="height:10%;"></div>
+                  <div class="bar q3 flex-1" style="height:40%;"></div>
+                  <div class="bar q4 flex-1" style="height:20%;"></div>
+               </div>
+            </div>
+            </div>
+      <!-- JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script>
+      $(function(){
+        $('input[type="radio"]').click(function(){
+            if ($(this).is(':checked')){
+            $("#submitpoll").removeAttr('disabled');
+            }
+        });
+        });
+</script>
+   </body>
+</html>
