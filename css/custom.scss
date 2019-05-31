@@ -1,0 +1,161 @@
+$blue: #3d6be0;
+$border-radius:.65em;
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Semibold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+html,
+body {
+	background: #f4f4f4;
+}
+
+html,body,p,h1,h2 {
+	font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-gray-400 {
+	color: #e6e6e6;
+}
+
+.header-area {
+    background: #fff;
+    // border-top:5px solid $blue;
+}
+
+.q-text {
+	font-size: calc(1vw + 1.45em);
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.q-number {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 0;
+	top: -10px;
+	font-size: calc(1vw + 6em);
+	line-height: 1;
+}
+
+.radio-list-custom {
+	// hide native buttons
+	input[type="radio"] {
+		position: absolute;
+		opacity: 0;
+		height: 0;
+		width: 0;
+		pointer-events: none;
+	}
+	input[type="radio"]+label {
+		display: inline-flex;
+		align-items: flex-start;
+		background: #fff;
+		border-radius: $border-radius;
+		margin-bottom: .75em;
+		padding: 1em;
+		padding-right: 5em;
+		border: 2px solid transparent;
+		box-shadow: 0 6px 10px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+		cursor: pointer;
+		min-width: 100%;
+		position: relative;
+	}
+	input[type="radio"]:checked+label {
+		border: 2px solid $blue;
+	}
+	input[type="radio"]+label::after {
+		border-radius: 50%;
+	}
+	input[type="radio"]+label::after {
+		content: '';
+		display: inline-block;
+		flex-shrink: 0;
+		width: 1.5em;
+		height: 1.5em;
+		background-color: transparent;
+		border: 2px solid #e6e6e6;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		top: 1em;
+		transition: transform 0.2s;
+		right: 2em;
+		position: absolute;
+	}
+	[type="radio"]:not(:checked)+label:after {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	input[type="radio"]:checked+label::after {
+		// checked state
+		background-color: $blue;
+		box-shadow: none;
+		border-color: $blue;
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		background-color: $blue;
+		-webkit-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		transform: scale(1.2);
+		-webkit-animation: check-bounce .5s;
+		animation: check-bounce .5s;
+		background-color: $blue;
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' stroke-width='2' fill='%23ffffff' stroke='%23ffffff'%3E%3Cpolyline fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='1,9 5,13 15,3 ' data-cap='butt'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
+		background-size: .75em;
+	}
+}
+
+@keyframes check-bounce {
+	0% {
+		-webkit-transform: scale(.7);
+		transform: scale(.7);
+	}
+	30% {
+		-webkit-transform: scale(1.3);
+		transform: scale(1.3);
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+}
+
+.poll-submit-btn {
+	background: $blue;
+	color: #fff;
+	border-radius: 4em;
+	transition: background-color .1s ease;
+}
+
+.poll-submit-btn:disabled,
+.poll-submit-btn[disabled] {
+	background-color: #cccccc;
+	color: #666666;
+}
