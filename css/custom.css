@@ -32,6 +32,10 @@ html, body, p, h1, h2 {
   color: #e6e6e6;
 }
 
+.border-radius-default {
+  border-radius: 0.5em;
+}
+
 .header-area {
   background: #fff;
 }
@@ -50,6 +54,24 @@ html, body, p, h1, h2 {
   top: -15px;
   font-size: calc(2vw + 5em);
   line-height: 1;
+}
+
+.lg-message {
+  font-size: calc(1vw + 1em);
+}
+.lg-message.success {
+  color: #30B34E;
+}
+
+.checkmark-done {
+  background: #30B34E;
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' stroke-width='2' fill='%23ffffff' stroke='%23ffffff'%3E%3Cpolyline fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='1,9 5,13 15,3 ' data-cap='butt'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
+  background-size: 70px;
 }
 
 .radio-list-custom input[type=radio] {
