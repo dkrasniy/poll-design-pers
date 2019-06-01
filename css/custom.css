@@ -186,14 +186,32 @@ html, body, p, h1, h2 {
   color: #666666;
 }
 
-.bar-chart-container {
-  height: 50vh;
-}
-
 .bar {
   background: #0874d9;
   max-width: 30px;
   border-radius: 0.5em;
+}
+
+.progress-bar-container {
+  height: 2em;
+  border-radius: 15px;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 15px;
+  background-color: #0874d9;
+  transition: width 0.6s ease;
+}
+
+.clear-all-style {
+  list-style-type: none;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
 }
 
 /*# sourceMappingURL=custom.css.map */
