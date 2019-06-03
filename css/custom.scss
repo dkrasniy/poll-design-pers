@@ -1,8 +1,11 @@
-$blue: #0874d9;
-$green:#30B34E;
+$blue: hsl(211, 100%, 50%);
+$green:hsl(130, 65%, 57%);
+$orange:hsla(35, 100%, 47%, 1);
+
 $border-radius:.5em;
 $progressbarradius:20px;
-$theme:$blue;
+
+$theme:$orange;
 
 @font-face {
 	font-family: 'Proxima Nova';

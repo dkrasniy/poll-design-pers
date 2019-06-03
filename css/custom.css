@@ -57,40 +57,40 @@ html, body, p, h1, h2 {
 }
 
 .bg-colored-blue {
-  background: #0874d9;
+  background: #f08c00;
 }
 .bg-colored-blue .q-text {
   color: #fff;
 }
 .bg-colored-blue .q-number {
-  color: #0764bb;
+  color: #d17a00;
 }
 
 .lg-message {
   font-size: calc(1vw + 1em);
 }
 .lg-message.success {
-  color: #30B34E;
+  color: #4ad962;
 }
 
 .checkmark-done {
   max-width: 8em;
 }
 .checkmark-done .primary {
-  fill: #f1fbf3;
+  fill: white;
 }
 .checkmark-done .secondary {
-  fill: #30B34E;
+  fill: #4ad962;
 }
 
 .no-active-polls-icon {
   max-width: 8em;
 }
 .no-active-polls-icon .primary {
-  fill: #e2f0fe;
+  fill: white;
 }
 .no-active-polls-icon .secondary {
-  fill: #0874d9;
+  fill: #007bff;
 }
 
 .radio-list-custom input[type=radio] {
@@ -116,7 +116,7 @@ html, body, p, h1, h2 {
   position: relative;
 }
 .radio-list-custom input[type=radio]:checked + label {
-  border: 2px solid #0874d9;
+  border: 2px solid #f08c00;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 .radio-list-custom input[type=radio] + label::after {
@@ -144,17 +144,17 @@ html, body, p, h1, h2 {
   transform: scale(1);
 }
 .radio-list-custom input[type=radio]:checked + label::after {
-  background-color: #0874d9;
+  background-color: #f08c00;
   box-shadow: none;
-  border-color: #0874d9;
+  border-color: #f08c00;
   opacity: 1;
-  background-color: #0874d9;
+  background-color: #f08c00;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   -webkit-animation: check-bounce 0.5s;
   animation: check-bounce 0.5s;
-  background-color: #0874d9;
+  background-color: #f08c00;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' stroke-width='2' fill='%23ffffff' stroke='%23ffffff'%3E%3Cpolyline fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='1,9 5,13 15,3 ' data-cap='butt'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
   background-size: 0.75em;
 }
@@ -178,7 +178,7 @@ html, body, p, h1, h2 {
   }
 }
 .poll-submit-btn {
-  background: #0874d9;
+  background: #f08c00;
   color: #fff;
   border-radius: 4em;
   transition: background-color 0.1s ease;
@@ -191,7 +191,7 @@ html, body, p, h1, h2 {
 }
 
 .bar {
-  background: #0874d9;
+  background: #f08c00;
   max-width: 30px;
   border-radius: 0.5em;
 }
@@ -207,7 +207,7 @@ html, body, p, h1, h2 {
 .progress-bar {
   height: 100%;
   border-radius: 20px;
-  background-color: #0874d9;
+  background-color: #f08c00;
   transition: width 0.6s ease;
 }
 
@@ -223,7 +223,7 @@ html, body, p, h1, h2 {
 }
 
 .scoreboard li:nth-child(odd) {
-  background: #ecf5fe;
+  background: #fffdfa;
 }
 
 /*# sourceMappingURL=custom.css.map */
