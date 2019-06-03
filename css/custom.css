@@ -70,7 +70,7 @@ html, body, p, h1, h2 {
   font-size: calc(1vw + 1em);
 }
 .lg-message.success {
-  color: #4ad962;
+  color: #30B34E;
 }
 .lg-message.orange {
   color: #f08c00;
@@ -187,12 +187,6 @@ html, body, p, h1, h2 {
   transition: background-color 0.1s ease;
 }
 
-.poll-submit-btn:disabled,
-.poll-submit-btn[disabled] {
-  background-color: #cccccc;
-  color: #666666;
-}
-
 .bar {
   background: #f08c00;
   max-width: 30px;
@@ -232,6 +226,59 @@ html, body, p, h1, h2 {
 
 .max-width-logo {
   max-width: 330px;
+}
+
+.theme-green .radio-list-custom input[type=radio]:checked + label {
+  border: 2px solid #30B34E;
+}
+.theme-green .radio-list-custom input[type=radio]:checked + label::after {
+  background-color: #30B34E;
+  box-shadow: none;
+  border-color: #30B34E;
+  opacity: 1;
+  background-color: #30B34E;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-animation: check-bounce 0.5s;
+  animation: check-bounce 0.5s;
+  background-color: #30B34E;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' stroke-width='2' fill='%23ffffff' stroke='%23ffffff'%3E%3Cpolyline fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='1,9 5,13 15,3 ' data-cap='butt'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
+  background-size: 0.75em;
+}
+
+#activateQtn {
+  background: #30B34E;
+  color: #fff;
+  border-radius: 4em;
+  transition: background-color 0.1s ease;
+}
+
+#resetQtn {
+  background: #E02200;
+  color: #fff;
+  border-radius: 4em;
+  transition: background-color 0.1s ease;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+}
+
+li.active-question label::before {
+  content: "active question";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #30B34E;
+  border-radius: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  color: white;
+  padding: 1px 5px;
 }
 
 /*# sourceMappingURL=custom.css.map */

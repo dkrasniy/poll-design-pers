@@ -1,10 +1,10 @@
 $blue: hsl(211, 100%, 50%);
-$green:hsl(130, 65%, 57%);
+$green:#30B34E;
 $orange:hsla(35, 100%, 47%, 1);
+$red: #E02200;
 
 $border-radius:.5em;
 $progressbarradius:20px;
-
 $theme:$orange;
 
 @font-face {
@@ -207,11 +207,6 @@ html,body,p,h1,h2 {
 	transition: background-color .1s ease;
 }
 
-.poll-submit-btn:disabled,
-.poll-submit-btn[disabled] {
-	background-color: #cccccc;
-	color: #666666;
-}
 
 .bar {
     background:$theme;
@@ -250,4 +245,61 @@ html,body,p,h1,h2 {
 } 
 .max-width-logo{
 	max-width: 330px;
+}
+
+.theme-green {
+	.radio-list-custom {
+		input[type="radio"]:checked+label {
+			border: 2px solid $green;
+		}
+		
+		input[type="radio"]:checked+label::after {
+			// checked state
+			background-color: $green;
+			box-shadow: none;
+			border-color: $green;
+			opacity: 1;
+			background-color: $green;
+			-webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			transform: scale(1.2);
+			-webkit-animation: check-bounce .5s;
+			animation: check-bounce .5s;
+			background-color: $green;
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' stroke-width='2' fill='%23ffffff' stroke='%23ffffff'%3E%3Cpolyline fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='1,9 5,13 15,3 ' data-cap='butt'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
+			background-size: .75em;
+		}
+	}
+}
+
+#activateQtn {
+	background:$green;
+	color: #fff;
+	border-radius: 4em;
+	transition: background-color .1s ease;
+}
+#resetQtn {
+	background:$red;
+	color: #fff;
+	border-radius: 4em;
+	transition: background-color .1s ease;
+}
+button:disabled,
+button[disabled] {
+	background-color: #cccccc!important;
+	color: #666666!important;
+}
+
+li.active-question label::before {
+    content: 'active question';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: $green;
+    border-radius: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    color: white;
+    padding: 1px 5px;
 }
