@@ -56,6 +56,16 @@ html, body, p, h1, h2 {
   line-height: 1;
 }
 
+.bg-colored-blue {
+  background: #0874d9;
+}
+.bg-colored-blue .q-text {
+  color: #fff;
+}
+.bg-colored-blue .q-number {
+  color: #0764bb;
+}
+
 .lg-message {
   font-size: calc(1vw + 1em);
 }

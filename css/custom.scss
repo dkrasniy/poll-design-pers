@@ -63,6 +63,19 @@ html,body,p,h1,h2 {
 	line-height: 1;
 }
 
+
+.bg-colored-blue {
+
+	background:$blue;
+	  .q-text {
+		color:#fff;
+	  }
+	  .q-number {
+		color:darken($blue, 6%);
+	  }
+	}
+
+
 .lg-message {
     font-size: calc(1vw + 1em);
     &.success {
