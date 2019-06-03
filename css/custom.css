@@ -90,10 +90,10 @@ html, body, p, h1, h2 {
   max-width: 8em;
 }
 .no-active-polls-icon .primary {
-  fill: white;
+  fill: #fff4e6;
 }
 .no-active-polls-icon .secondary {
-  fill: #007bff;
+  fill: #f08c00;
 }
 
 .radio-list-custom input[type=radio] {
@@ -211,7 +211,8 @@ html, body, p, h1, h2 {
   height: 100%;
   border-radius: 20px;
   background-color: #f08c00;
-  transition: width 0.6s ease;
+  transition: width 0.5s ease;
+  width: 0;
 }
 
 .clear-all-style {
@@ -227,6 +228,10 @@ html, body, p, h1, h2 {
 
 .scoreboard li:nth-child(odd) {
   background: #fffdfa;
+}
+
+.max-width-logo {
+  max-width: 330px;
 }
 
 /*# sourceMappingURL=custom.css.map */
