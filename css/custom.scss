@@ -63,8 +63,8 @@ html,body,p,h1,h2 {
 	width: 100%;
 	left: 0;
 	z-index: 0;
-	top: calc(-50% - .1em);
-	font-size: calc(2vw + 5em);
+	top: calc(-50% - .05em);
+	font-size: calc(2vw + 7em);
 	line-height: 1;
 }
 
@@ -76,7 +76,7 @@ html,body,p,h1,h2 {
 		color:#fff;
 	  }
 	  .q-number {
-		color:darken($theme, 6%);
+		color:darken($theme, 3%);
 	  }
 	}
 
@@ -85,14 +85,17 @@ html,body,p,h1,h2 {
     font-size: calc(1vw + 1em);
     &.success {
         color:$green;
+	}
+	&.orange {
+        color:$orange;
     }
 }
 .checkmark-done {
     .primary {
-        fill: lighten($green, 52%);
+        fill: $theme;
     }
     .secondary {
-        fill: $green; 
+      fill: lighten($theme, 45%);
     }
     max-width: 8em;
 }

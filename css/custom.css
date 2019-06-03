@@ -51,8 +51,8 @@ html, body, p, h1, h2 {
   width: 100%;
   left: 0;
   z-index: 0;
-  top: calc(-50% - .1em);
-  font-size: calc(2vw + 5em);
+  top: calc(-50% - .05em);
+  font-size: calc(2vw + 7em);
   line-height: 1;
 }
 
@@ -63,7 +63,7 @@ html, body, p, h1, h2 {
   color: #fff;
 }
 .bg-colored-blue .q-number {
-  color: #d17a00;
+  color: #e08300;
 }
 
 .lg-message {
@@ -72,15 +72,18 @@ html, body, p, h1, h2 {
 .lg-message.success {
   color: #4ad962;
 }
+.lg-message.orange {
+  color: #f08c00;
+}
 
 .checkmark-done {
   max-width: 8em;
 }
 .checkmark-done .primary {
-  fill: white;
+  fill: #f08c00;
 }
 .checkmark-done .secondary {
-  fill: #4ad962;
+  fill: #ffeed6;
 }
 
 .no-active-polls-icon {
