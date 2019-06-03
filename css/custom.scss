@@ -150,7 +150,7 @@ html,body,p,h1,h2 {
 		background-repeat: no-repeat;
 		background-position: center;
 		position: relative;
-		top: 1em;
+		top: calc(50% - 0.75em);
 		transition: transform 0.2s;
 		right: 2em;
 		position: absolute;
