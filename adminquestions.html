@@ -51,6 +51,8 @@
             $("input[name='questionId']:checked").parent().addClass('active-question');
             $('#resetQtn').removeClass('hidden')
         });
+        $('#resetQtn').click(function(){
+           $('.active-question').removeClass('active-question')});
         });
 </script>
    </body>
