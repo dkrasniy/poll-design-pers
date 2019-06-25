@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="css/tailwind.min.css" >
+      <link rel="stylesheet" href="css/custom.css">
+      <title>Questions</title>
+   </head>
+   <body>
+      <div class="header-area py-12 px-4 pb-16 ">
+         <div class="relative text-center max-w-xl mx-auto">
+            <span class="font-size-xl q-number text-6xl font-black text-gray-400">TorF</span>
+            <h1 class="q-text text-4xl font-semibold relative text-white">Which of the following is true?</h1>
+         </div>
+      </div>
+      <div class="max-w-xl mx-auto py-6 px-4 -mt-16">
+         <form>
+            <fieldset>
+               <ul class="radio-list-custom">
+                  <li>
+                     <input type="radio" name="radioButton" id="radio1">
+                     <label for="radio1">Brad has a twin sister named Brianna.</label>
+                  </li>
+                  <li>
+                        <input type="radio" name="radioButton" id="radio4">
+                        <label for="radio4">Brad met his partner of 20 years at a baby shower.</label>
+                     </li>
+                  <li>
+                     <input type="radio" name="radioButton" id="radio2">
+                     <label for="radio2">Brad spent 45 days walking the Camino de Santiago.</label>
+                  </li>
+               </ul>
+            </fieldset>
+            <button id="submitpoll" type="submit" disabled role="submit" class="mt-2 poll-submit-btn block w-full text-lg font-semibold px-2 py-3" >Submit </button>
+         </form>
+      </div>
+      <!-- JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script>
+      $(function(){
+        $('input[type="radio"]').click(function(){
+            if ($(this).is(':checked')){
+            $("#submitpoll").removeAttr('disabled');
+            }
+        });
+        });
+</script>
+   </body>
+</html>

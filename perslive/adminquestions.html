@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="css/tailwind.min.css" >
+      <link rel="stylesheet" href="css/custom.css">
+      <title>Questions</title>
+   </head>
+   <body class="theme-green">
+      <div class="header-area py-12 px-4 pb-16 ">
+         <div class="relative text-center max-w-xl mx-auto">
+
+            <h1 class="q-text text-4xl font-semibold relative">Poll Admin</h1>
+         </div>
+      </div>
+      <div class="max-w-xl mx-auto py-6 px-4 -mt-16">
+         <form>
+            <fieldset>
+               <ul class="radio-list-custom">
+                  <li>
+                     <input type="radio" name="questionId" value="1" id="questionId1" />
+                     <label for="questionId1"><p><b>What is the calPERS retirment age?</b><br/>4000<br/>7000<br/>2000<br/></p>.</label>
+                  </li>
+                  <li>
+                        <input type="radio" name="questionId" value="2" id="questionId2" />
+                        <label for="questionId2"><p><b>Who is CalPERS CEO?</b><br/>Marcie Frost<br/>Doug Frost<br/>Timothy Tim<br/></p></label>
+                     </li>
+                  
+               </ul>
+            </fieldset>
+
+            <button id="activateQtn" type="button" disabled value="Activate Question" class="mt-2 activate-question-btn block w-full text-lg font-semibold px-2 py-3" >Activate Question</button>
+            <button id="resetQtn" type="button" value="Reset Question" class="hidden mt-2 reset-question-btn block w-full text-lg font-semibold px-2 py-3" >Reset Question</button>
+         </form>
+
+
+      </div>
+      <!-- JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script>
+      $(function(){
+        $('input[type="radio"]').click(function(){
+            if ($(this).is(':checked')){
+            $("#activateQtn").removeAttr('disabled');
+            }
+        });
+        $("#activateQtn").click(function(){
+           $('.active-question').removeClass('active-question')
+            $("input[name='questionId']:checked").parent().addClass('active-question');
+            $('#resetQtn').removeClass('hidden')
+        });
+        $('#resetQtn').click(function(){
+           $('.active-question').removeClass('active-question')});
+        });
+</script>
+   </body>
+</html>

@@ -1,0 +1,323 @@
+$blue: hsl(211, 100%, 50%);
+$green:#30B34E;
+$orange:hsla(35, 100%, 47%, 1);
+$red: #E02200;
+
+$calperslivelightblue: rgba(130,195,220);
+$calpersliveblue: rgba(0,139,190);
+$calperslivepurple: rgba(148,92,163);
+$calperslivedark: rgba(89,81,139);
+
+$border-radius:.5em;
+$progressbarradius:20px;
+$theme:$calperslivedark;
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Semibold.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+html,
+body {
+	background: #f4f4f4;
+}
+
+html,body,p,h1,h2 {
+	font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	//font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-gray-400 {
+	color: #e6e6e6;
+}
+.border-radius-default {
+    border-radius:$border-radius;
+}
+.header-area {
+	background: url('../assets/bgs-03.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top:5px solid $calperslivedark;
+}
+
+.q-text {
+	font-size: calc(1vw + 1.5em);
+	font-weight: 700;
+	line-height: 1.1;
+	color:white;
+}
+
+.q-number {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 0;
+	top: calc(-50% - .05em);
+	font-size: calc(2vw + 7em);
+	line-height: 1;
+	display: none;
+}
+
+
+.bg-colored-blue {
+
+	background:$theme;
+	  .q-text {
+		color:#fff;
+	  }
+	  .q-number {
+		color:darken($theme, 3%);
+	  }
+	}
+
+
+.lg-message {
+    font-size: calc(1vw + 1em);
+    &.success {
+        color:$green;
+	}
+	&.orange {
+        color:$orange;
+    }
+}
+.checkmark-done {
+    .primary {
+        fill: $theme;
+    }
+    .secondary {
+      fill: lighten($theme, 45%);
+    }
+    max-width: 8em;
+}
+.no-active-polls-icon {
+    .primary {
+        fill: lighten($theme, 48%);
+    }
+    .secondary {
+        fill: $theme; 
+    }
+    max-width: 8em;
+}
+.radio-list-custom {
+	// hide native buttons
+	input[type="radio"] {
+        
+		position: absolute;
+		opacity: 0;
+		height: 0;
+		width: 0;
+        pointer-events: none;
+	}
+	input[type="radio"]+label {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+		display: inline-flex;
+		align-items: flex-start;
+		background: #fff;
+		border-radius: $border-radius;
+		margin-bottom: .75em;
+		padding: 1em;
+		padding-right: 4em;
+		border: 2px solid transparent;
+         box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      
+		cursor: pointer;
+		min-width: 100%;
+		position: relative;
+	}
+	input[type="radio"]:checked+label {
+        border: 2px solid $calperslivelightblue;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	}
+	input[type="radio"]+label::after {
+		border-radius: 50%;
+	}
+	input[type="radio"]+label::after {
+		content: '';
+		display: inline-block;
+		flex-shrink: 0;
+		width: 1.5em;
+		height: 1.5em;
+		background-color: transparent;
+		border: 2px solid #e6e6e6;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		top: calc(50% - 0.75em);
+		transition: transform 0.2s;
+		right: 2em;
+		position: absolute;
+	}
+	[type="radio"]:not(:checked)+label:after {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	input[type="radio"]:checked+label::after {
+		// checked state
+		background-color: $calperslivelightblue;
+		box-shadow: none;
+		border-color: $calperslivelightblue;
+		opacity: 1;
+		background-color: $calperslivelightblue;
+		-webkit-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		transform: scale(1.2);
+		-webkit-animation: check-bounce .5s;
+		animation: check-bounce .5s;
+		background-color: $calperslivelightblue;
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' stroke-width='2' fill='%23ffffff' stroke='%23ffffff'%3E%3Cpolyline fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='1,9 5,13 15,3 ' data-cap='butt'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
+		background-size: .75em;
+    }
+ 
+}
+
+@keyframes check-bounce {
+	0% {
+		-webkit-transform: scale(.7);
+		transform: scale(.7);
+	}
+	30% {
+		-webkit-transform: scale(1.3);
+		transform: scale(1.3);
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+}
+
+.poll-submit-btn {
+	background: $theme;
+	color: #fff;
+	border-radius: 4em;
+	transition: background-color .1s ease;
+}
+
+
+.bar {
+    background:$theme;
+    max-width: 30px;
+    border-radius: .5em;
+}
+
+.progress-bar-container{
+    height: 3em;
+    border-radius: $progressbarradius;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: #e9ecef;
+}
+.progress-bar {
+    height: 100%;
+    border-radius: $progressbarradius;
+    background-color:$calperslivelightblue;
+	transition: width 0.5s ease;
+	width: 0;
+}
+.clear-all-style {
+    list-style-type: none;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
+.flex-100{
+	flex: 100%;
+}
+
+// .scoreboard {
+// 	li:nth-child(odd) {
+// 		background: lighten($theme,52%)
+// 	}
+// } 
+.max-width-logo{
+	max-width: 330px;
+}
+
+.theme-green {
+	.radio-list-custom {
+		input[type="radio"]:checked+label {
+			border: 2px solid $green;
+		}
+		
+		input[type="radio"]:checked+label::after {
+			// checked state
+			background-color: $green;
+			box-shadow: none;
+			border-color: $green;
+			opacity: 1;
+			background-color: $green;
+			-webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			transform: scale(1.2);
+			-webkit-animation: check-bounce .5s;
+			animation: check-bounce .5s;
+			background-color: $green;
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' stroke-width='2' fill='%23ffffff' stroke='%23ffffff'%3E%3Cpolyline fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='1,9 5,13 15,3 ' data-cap='butt'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
+			background-size: .75em;
+		}
+	}
+}
+
+#activateQtn {
+	background:$green;
+	color: #fff;
+	border-radius: 4em;
+	transition: background-color .1s ease;
+}
+#resetQtn {
+	background:$red;
+	color: #fff;
+	border-radius: 4em;
+	transition: background-color .1s ease;
+}
+button:disabled,
+button[disabled] {
+	background-color: #cccccc!important;
+	color: #666666!important;
+}
+
+li.active-question label::before {
+    content: 'active question';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: $green;
+    border-radius: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    color: white;
+    padding: 1px 5px;
+}
+.icon-chat-group {
+	.primary {
+		fill:$calperslivepurple;
+	}
+	.secondary {
+		fill:$calperslivedark;
+	}
+}
