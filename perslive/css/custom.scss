@@ -80,7 +80,6 @@ html,body,p,h1,h2 {
 
 
 .bg-colored-blue {
-
 	background:$theme;
 	  .q-text {
 		color:#fff;
@@ -88,6 +87,11 @@ html,body,p,h1,h2 {
 	  .q-number {
 		color:darken($theme, 3%);
 	  }
+	}
+
+	.hover\:bg-colored-blue-dark:hover {
+	background:darken($theme, 5%);
+		
 	}
 
 
@@ -315,9 +319,49 @@ li.active-question label::before {
 }
 .icon-chat-group {
 	.primary {
-		fill:$calperslivepurple;
+		fill:white;
 	}
 	.secondary {
-		fill:$calperslivedark;
+		fill:white;
+	}
+}
+.top-20 {
+	top:40px;
+}
+
+
+.stay-tuned-prompt {
+	transition: .4s ease opacity;
+}
+.ask-question-screen {
+	opacity: 0;
+	transition: .2s ease all;
+	transform: translateY(150px);
+	visibility: hidden;
+	circle.primary {
+		fill: #f3f3f3;
+	}
+	circle.secondary {
+		fill: #777;
+	}
+	.close-icon-container {
+		width: 33px;
+		height: 33px;
+	}
+}
+.close-icon-container {
+	top: -40px;
+    right: 0;
+}
+.ask-question-open {
+	background:black;
+	.stay-tuned-prompt {
+		opacity: .35!important;
+	}
+	.ask-question-screen {
+		transition: .3s ease all;
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
 	}
 }
